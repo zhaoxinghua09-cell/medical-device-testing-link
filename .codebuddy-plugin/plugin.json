@@ -1,0 +1,63 @@
+{
+  "name": "medical-device-testing-link",
+  "version": "1.0.0",
+  "description": "Medical device testing matchmaking expert: test item derivation, lab matching/quote, A+B subcontract plans, UDI validation and regulatory deadlines.",
+  "author": {
+    "name": "Buda Pan"
+  },
+  "agents": [
+    "./agents/medical-device-testing-link.md"
+  ],
+  "skills": [
+    "./skills/medical-device-testing"
+  ],
+  "expertType": "agent",
+  "agentName": "medical-device-testing-link",
+  "displayName": {
+    "en": "MedTestLink",
+    "zh": "检械通"
+  },
+  "profession": {
+    "en": "Medical Device Testing Broker",
+    "zh": "医械检测对接师"
+  },
+  "displayDescription": {
+    "en": "Full-chain medical device testing matchmaking: derive test items from device, match and compare labs, quote and lead time, A+B subcontract plans, UDI validation and regulatory deadlines.",
+    "zh": "医械检测全链路对接：推导检验项目，匹配比价机构，设计分包方案，核算报价交期与法规节点。"
+  },
+  "avatar": "avatars/medical-device-testing-link.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "帮我的髋关节假体（无菌要求）找检测机构，出个报价和交期",
+    "en": "Find testing labs for my hip joint prosthesis (sterile required), with quote and lead time"
+  },
+  "plugin": "medical-device-testing-link",
+  "tags": [
+    {
+      "en": "Testing Matchmaking",
+      "zh": "检测对接"
+    },
+    {
+      "en": "Registration Testing",
+      "zh": "注册检验"
+    },
+    {
+      "en": "UDI & Regulatory",
+      "zh": "UDI与法规"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Find testing labs for my hip joint prosthesis (sterile required), with quote and lead time",
+      "zh": "帮我的髋关节假体（无菌要求）找检测机构，出个报价和交期"
+    },
+    {
+      "en": "One lab can't cover all 13 test items, design an A+B subcontract plan for me",
+      "zh": "13个检验项目一家机构接不全，帮我设计A+B分包方案"
+    },
+    {
+      "en": "Validate this UDI: (01)06901234567892(10)ABC, and how many days left before GMP 2025 takes effect?",
+      "zh": "帮我校验解析这个UDI：(01)06901234567892(10)ABC，另外GMP 2025还有多少天施行？"
+    }
+  ]
+}

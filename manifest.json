@@ -1,0 +1,16 @@
+{
+  "name": "medical-device-testing-link",
+  "displayName": { "zh": "检械通", "en": "MedTestLink" },
+  "version": "1.0.0",
+  "type": "agent",
+  "category": "12-IndustryConsultant",
+  "author": "潘布达 (Buda Pan)",
+  "license": "MIT",
+  "summary": "医械（尤其骨科植入物）检测全链路对接专家：推导检验项目、匹配比价机构、设计 A+B 分包、核算报价交期、校验 UDI、提醒法规节点。",
+  "dependencies": {
+    "connectors": ["medxpert-ortho-mcp"]
+  },
+  "dataDisclosure": "机构库/标准库/报价为随包示例数据（非真实资质），详见配套 ortho-mcp 连接器的 SAMPLE_DATA.md，可自行替换为真实数据。",
+  "securitySummary": "本地只读，零网络外发、零凭据；依赖的 ortho-mcp 连接器亦为本地闭环。详见 SECURITY.md。",
+  "publishedVia": "WorkBuddy 开放平台"
+}

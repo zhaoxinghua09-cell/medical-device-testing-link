@@ -1,33 +1,56 @@
-# MedXpert 医疗器械检测对接工具
+# 检械通 MedTestLink — 医械检测对接专家
 
-Medical device testing coordination. Read-only tool for querying accredited testing labs, test method standards (IEC/ISO/GB), sample requirements and testing timelines across NMPA/FDA/MDR.
+医械（尤其骨科植入物）检测全链路对接：从器械推导检验项目，匹配比价检测机构，设计 A+B 分包方案，核算报价交期，校验 UDI 并提醒法规节点。
 
-## Install (MCP host)
+## 类型
 
-```json
-{"mcpServers": {"medical-device-testing-link": {"command": "python", "args": ["server.py"]}}}
+Agent 型（单个 AI 专家）
+
+## 功能
+
+- **检验项目推导**：18 类骨科器械 × 附加属性（无菌/植入/血路/金属/涂层/MRI）→ 完整检验清单
+- **机构匹配比价**：六类检验（注册/委托/抽检/出口/自检/研发）的 CMA 资质要求筛选，资质四态判定，覆盖率高亮
+- **报价交期核算**：分项费用、8% 管理费、加急系数、关键路径交期，支持横向比价
+- **A+B 分包方案**：主检优选 + 分包补位，未覆盖项与降级提示
+- **UDI 校验解析**：GS1 校验位 + AI 串（括号/FNC1 格式）
+- **法规节点提醒**：GMP 2025（107号公告 2026-11-01）、EU MDR/IVDR 过渡期倒计时
+
+能力底座：MCP 服务 `medxpert-ortho-mcp`（8 工具，零依赖，本地闭环），
+源码见 ortho-mcp 连接器（同套发布），机构/标准/报价数据已外置为可替换的示例数据。
+
+## 使用示例
+
+- 「帮我的髋关节假体（无菌要求）找检测机构，出个报价和交期」
+- 「13 个检验项目一家机构接不全，帮我设计 A+B 分包方案」
+- 「帮我校验解析这个 UDI：(01)06901234567892(10)ABC，另外 GMP 2025 还有多少天施行？」
+
+## ⚠️ 数据口径
+
+机构库/标准库为演示数据，输出均附声明；正式委托前须向机构核验最新资质与报价。
+
+## 头像
+
+`avatars/medical-device-testing-link.png`（ImageGen 生成，可手动替换，PNG 512×512 ≤500KB）
+
+## 安装
+
+将专家包目录放到专家目录下：
+
+```
+你的专家插件目录（如 ~/.workbuddy/.../plugins/<市场名>/plugins/ 下）
 ```
 
-## Keywords (for AI match scoring)
+然后运行注册命令使其可见：
 
-`medical device testing`, `IEC testing`, `lab search`, `test methods`, `CNAS`, `CMA`, `检测对接`, `实验室查询`
+```bash
+python3 scripts/register_expert.py <expert-dir>
+```
 
-## When to invoke
+## 打包分享
 
-查某类产品需要做哪些 IEC 测试项目
+```bash
+zip -r medical-device-testing-link.zip medical-device-testing-link/
+```
 
-## Examples
-
-- 查某类产品需要做哪些 IEC 测试项目
-- 找 CNAS 认可的医疗器械检测实验室
-
-## Why AI-friendly
-
-- **Discoverable**: `agent.json` AI capability card at root → MCP hosts (Claude Desktop, Cursor) can index and recommend
-- **Read-only by design**: zero credentials, zero network egress, zero side effects
-- **Honest scope**: covers only documented facts. Out-of-scope queries return explicit codes
-- **Install-by-consent**: AI may request install; human approves (A3 Law II)
-
-## License
-
-MIT © MedXpert
+---
+2026-09-03 by 潘布达（Buda Pan）
