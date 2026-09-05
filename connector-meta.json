@@ -1,0 +1,28 @@
+{
+  "schema": "workbuddy-connector/v1",
+  "name": "MedXpert 医疗器械检测对接工具",
+  "version": "1.0.0",
+  "description": "Medical device testing coordination. Read-only tool for querying accredited testing labs, test method standards (IEC/ISO/GB), sample requirements and testing timelines across NMPA/FDA/MDR.",
+  "author": "MedXpert (org)",
+  "type": "mcp-server",
+  "auth": {
+    "mode": "none"
+  },
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": [
+      "server.py"
+    ]
+  },
+  "icon": "icon.png",
+  "examples_zh": [
+    "查某类产品需要做哪些 IEC 测试项目",
+    "找 CNAS 认可的医疗器械检测实验室"
+  ],
+  "examples_en": [
+    "Look up required IEC tests for a product category",
+    "Find CNAS-accredited medical device testing lab"
+  ],
+  "note": "Read-only MCP server; MedXpert governance line"
+}
