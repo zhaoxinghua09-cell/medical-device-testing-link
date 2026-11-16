@@ -1,8 +1,20 @@
 # 检械通 MedTestLink — 医械检测对接专家
 
-> **Status (2026-11-16): this pack is an expert/agent card, not a running MCP server.** The shared connector it references, `medxpert-ortho-mcp`, does not exist yet — it is absent from PyPI, from the official MCP Registry, and from every repository in the organisation (verified 404 in all three). No `server.py` ships here. Anything below that says otherwise is a plan, not a running capability.
+> **Status (2026-11-16, updated): this pack is an expert/agent card, not a server — and the connector it depends on now exists.** `medxpert-ortho-mcp` 0.1.1 is published: on PyPI (wheel + sdist), in the official MCP Registry (`isLatest: true`, published 2026-11-16T12:56:07Z), and verified by a real `uvx` handshake returning 8 tools. Install it first:
 >
-> **状态（2026-11-16）：本包是专家/Agent 卡片，不是一个能跑的 MCP 服务。**它所引用的共享连接器 `medxpert-ortho-mcp` 目前并不存在——PyPI、官方 MCP Registry、组织内全部仓库三处实测均无此物。本仓没有 `server.py`。下文凡与此冲突的表述，是计划，不是已有能力。
+> ```bash
+> uvx medxpert-ortho-mcp
+> ```
+>
+> The tools run over **illustrative sample data** and say so in every result; point `ORTHO_DATA_DIR` at your own datasets for real work. This repository still ships no `server.py` — it is a card that a host loads, and the capability lives in the connector.
+>
+> **状态（2026-11-16 更新）：本包是专家/Agent 卡片，不是服务；它所依赖的连接器现在真的存在了。**`medxpert-ortho-mcp` 0.1.1 已发布：PyPI（wheel + sdist）、官方 MCP Registry（`isLatest: true`，发布于 2026-11-16T12:56:07Z），并由真实 `uvx` 安装握手验证——返回 8 个工具。先安装它：
+>
+> ```bash
+> uvx medxpert-ortho-mcp
+> ```
+>
+> 工具跑在**示例数据**上，且每个返回值都会说明这一点；正式使用请把 `ORTHO_DATA_DIR` 指向你自己的数据集。本仓仍然没有 `server.py`——它是宿主加载的卡片，能力在连接器里。
 
 ## 许可说明 · License Notice
 

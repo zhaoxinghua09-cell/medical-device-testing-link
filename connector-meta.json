@@ -10,7 +10,7 @@
   },
   "transport": {
     "type": "host-loaded",
-    "note": "专家包（宿主加载）。所依赖的共享连接器 medxpert-ortho-mcp 尚未实现、也未发布到 PyPI 与官方 Registry（2026-11-16 实测三处均不存在），因此本包不声明可启动的 MCP 入口。"
+    "note": "专家包（宿主加载）。所依赖的共享连接器 medxpert-ortho-mcp 于 2026-11-16 实现并发布：PyPI 0.1.1（两个分发文件）、官方 Registry 0.1.1（isLatest=true，publishedAt 2026-11-16T12:56:07Z）、uvx 安装握手 8 工具通过。卡片本身仍无 server 入口，宿主加载形态不变。"
   },
   "icon": "icon.png",
   "examples_zh": [
