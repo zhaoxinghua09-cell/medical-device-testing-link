@@ -1,4 +1,9 @@
 # 检械通 MedTestLink — 医械检测对接专家
+
+> **Status (2026-11-16): this pack is an expert/agent card, not a running MCP server.** The shared connector it references, `medxpert-ortho-mcp`, does not exist yet — it is absent from PyPI, from the official MCP Registry, and from every repository in the organisation (verified 404 in all three). No `server.py` ships here. Anything below that says otherwise is a plan, not a running capability.
+>
+> **状态（2026-11-16）：本包是专家/Agent 卡片，不是一个能跑的 MCP 服务。**它所引用的共享连接器 `medxpert-ortho-mcp` 目前并不存在——PyPI、官方 MCP Registry、组织内全部仓库三处实测均无此物。本仓没有 `server.py`。下文凡与此冲突的表述，是计划，不是已有能力。
+
 ## 许可说明 · License Notice
 
 - **权利状态**：本仓库以 **MIT 许可** 许可发布，可依该许可证条款自由使用、修改与再分发。
