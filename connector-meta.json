@@ -4,16 +4,13 @@
   "version": "1.0.0",
   "description": "Medical device testing coordination. Read-only tool for querying accredited testing labs, test method standards (IEC/ISO/GB), sample requirements and testing timelines across NMPA/FDA/MDR.",
   "author": "MedXpert (org)",
-  "type": "mcp-server",
+  "type": "agent",
   "auth": {
     "mode": "none"
   },
   "transport": {
-    "type": "stdio",
-    "command": "python",
-    "args": [
-      "server.py"
-    ]
+    "type": "host-loaded",
+    "note": "专家包（宿主加载）。所依赖的共享连接器 medxpert-ortho-mcp 尚未实现、也未发布到 PyPI 与官方 Registry（2026-11-16 实测三处均不存在），因此本包不声明可启动的 MCP 入口。"
   },
   "icon": "icon.png",
   "examples_zh": [
