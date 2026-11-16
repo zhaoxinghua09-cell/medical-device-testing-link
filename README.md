@@ -1,20 +1,36 @@
 # 检械通 MedTestLink — 医械检测对接专家
 
-> **Status (2026-11-16, updated): this pack is an expert/agent card, not a server — and the connector it depends on now exists.** `medxpert-ortho-mcp` 0.1.1 is published: on PyPI (wheel + sdist), in the official MCP Registry (`isLatest: true`, published 2026-11-16T12:56:07Z), and verified by a real `uvx` handshake returning 8 tools. Install it first:
+> **Status: this pack is an expert/agent card, not a server — and the connector it depends on exists.**
+> `medxpert-ortho-mcp` is published on PyPI and in the official MCP Registry, and a real `uvx` handshake
+> returns its 8 tools. Install it:
 >
 > ```bash
 > uvx medxpert-ortho-mcp
 > ```
 >
-> The tools run over **illustrative sample data** and say so in every result; point `ORTHO_DATA_DIR` at your own datasets for real work. This repository still ships no `server.py` — it is a card that a host loads, and the capability lives in the connector.
+> **The version number is deliberately not written here.** It changed twice in one day; a number frozen in
+> a card goes stale without anyone noticing. Ask the registry instead
+> (`io.github.zhaoxinghua09-cell/medxpert-ortho-mcp`), or just run the install line above.
 >
-> **状态（2026-11-16 更新）：本包是专家/Agent 卡片，不是服务；它所依赖的连接器现在真的存在了。**`medxpert-ortho-mcp` 0.1.1 已发布：PyPI（wheel + sdist）、官方 MCP Registry（`isLatest: true`，发布于 2026-11-16T12:56:07Z），并由真实 `uvx` 安装握手验证——返回 8 个工具。先安装它：
+> The tools run on illustrative sample data and mark every result `sample_data: true`. Point
+> `ORTHO_DATA_DIR` at your own datasets for real work, and run
+> `python -m medxpert_ortho.server --validate-data` first — it fails loudly on a wrong path, a broken JSON
+> file or a structurally bad dataset rather than quietly answering from the samples.
+>
+> This repository still ships no `server.py`: it is a card that a host loads, and the capability lives in
+> the connector.
+>
+> **状态：本包是专家/Agent 卡片，不是服务；它所依赖的连接器已经存在。**`medxpert-ortho-mcp` 已发布在 PyPI 与官方 MCP Registry，并由真实 `uvx` 握手验证——返回 8 个工具。安装：
 >
 > ```bash
 > uvx medxpert-ortho-mcp
 > ```
 >
-> 工具跑在**示例数据**上，且每个返回值都会说明这一点；正式使用请把 `ORTHO_DATA_DIR` 指向你自己的数据集。本仓仍然没有 `server.py`——它是宿主加载的卡片，能力在连接器里。
+> **版本号有意不写在这里。** 它在一天之内变了两次；冻在卡片里的数字会悄悄过期。要版本请查 Registry（`io.github.zhaoxinghua09-cell/medxpert-ortho-mcp`），或者直接跑上面的安装命令。
+>
+> 工具跑在示例数据上，每个返回值都标 `sample_data: true`。正式使用请把 `ORTHO_DATA_DIR` 指向你自己的数据集，并先跑 `python -m medxpert_ortho.server --validate-data`——路径错、JSON 坏、结构不合规都会报错退出，而不是拿示例悄悄作答。
+>
+> 本仓仍然没有 `server.py`：它是宿主加载的卡片，能力在连接器里。
 
 ## 许可说明 · License Notice
 
